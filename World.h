@@ -5,6 +5,7 @@
 #include "DijkstrasPathFinder.h"
 #include "AStarPathFinder.h"
 #include "JPSPathFinder.h"
+#include "GreedyPathFinder.h"
 #include <vector>
 #include <optional>
 #include <set>
@@ -19,6 +20,7 @@ public:
     void findPathDijkstra();
     void findPathAStar();
     void findPathJPS();
+    void findPathGreedy();
     void render(HDC hdc) const;
 
 private:
@@ -26,6 +28,6 @@ private:
     std::optional<std::pair<int, int>> startPoint;
     std::optional<std::pair<int, int>> endPoint;
     std::vector<Node> currentPath;
-    std::set<Node> exploredNodes;  // New: track explored nodes
+    std::set<Node> exploredNodes;
     bool isValidCell(int x, int y) const;
 };

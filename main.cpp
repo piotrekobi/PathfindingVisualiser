@@ -94,6 +94,10 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
             world->findPathJPS();
             InvalidateRect(hwnd, nullptr, FALSE);
             break;
+        case 'G':
+			world->findPathGreedy();
+            InvalidateRect(hwnd, nullptr, FALSE);
+            break;
         }
         return 0;
     }

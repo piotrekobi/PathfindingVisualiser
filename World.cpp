@@ -126,6 +126,31 @@ void World::findPathJPS() {
 #endif
 }
 
+void World::findPathGreedy() {
+    if (!startPoint || !endPoint) {
+        return;
+    }
+
+    Node start{ startPoint->first, startPoint->second };
+    Node end{ endPoint->first, endPoint->second };
+
+    auto [path, explored] = PathfindingStats::timePathfinding(
+        "Greedy",
+        walls,
+        start,
+        end,
+        GreedyPathFinder::findPath
+    );
+
+    currentPath = path;
+    exploredNodes = explored;
+
+#ifdef _DEBUG
+    std::cout << "Greedy path found with " << currentPath.size() << " nodes, explored "
+        << exploredNodes.size() << " nodes" << std::endl;
+#endif
+}
+
 void World::render(HDC hdc) const {
     // Fill background white
     RECT clientRect;

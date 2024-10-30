@@ -136,6 +136,7 @@
     <ClInclude Include="Debug.h" />
     <ClInclude Include="DijkstrasPathFinder.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="GreedyPathFinder.h" />
     <ClInclude Include="JPSPathFinder.h" />
     <ClInclude Include="PathFindingStats.h" />
     <ClInclude Include="World.h" />
@@ -143,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="AStarPathFinder.cpp" />
     <ClCompile Include="DijkstrasPathFinder.cpp" />
+    <ClCompile Include="GreedyPathFinder.cpp" />
     <ClCompile Include="JPSPathFinder.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PathFindingStats.cpp" />
